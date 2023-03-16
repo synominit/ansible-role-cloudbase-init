@@ -9,13 +9,13 @@
 - name: Configure cloudbase-init.conf file
   ansible.windows.win_template:
     src: cloudbase-init.conf.j2
-    dest: '{{ cloudbase_install_path }}cloudbase-init.conf'
+    dest: '{{ cloudbase_install_path }}\conf\cloudbase-init.conf'
     newline_sequence: '\n'
     backup: true
 
 - name: Configure cloudbase-init-unattended.conf file
   ansible.windows.win_template:
     src: cloudbase-init-unattend.conf.j2
-    dest: '{{ cloudbase_install_path }}cloudbase-init-unattend.conf'
+    dest: '{{ cloudbase_install_path }}\conf\cloudbase-init-unattend.conf'
     newline_sequence: '\n'
     backup: true

@@ -17,11 +17,11 @@ mtu_use_dhcp_config=true
 ntp_use_dhcp_config=true
 local_scripts_path={{ cloudbase_local_scripts_path }}
 check_latest_version=true
-metadata_services= {{ cloudbase_metadata_services }}
+metadata_services={{ cloudbase_metadata_services }}
 plugins={{ cloudbase_plugins | join(',') }}
-activate_windows = {{ cloudbase_activate_windows }}
+activate_windows={{ cloudbase_activate_windows }}
 {% if cloudbase_activate_windows %}
-set_kms_product_key = {{ cloudbase_set_kms_product_key }}
-kms_host = {{ cloudbase_kms_host }}
-log_licensing_info = {{ cloudbase_log_licensing_info }}
+set_kms_product_key={{ cloudbase_set_kms_product_key }}
+kms_host={{ cloudbase_kms_host }}
+log_licensing_info={{ cloudbase_log_licensing_info }}
 {% endif %}
