@@ -1,0 +1,22 @@
+[DEFAULT]
+username=Admin
+groups=Administrators
+inject_user_password=true
+config_drive_raw_hhd=true
+config_drive_cdrom=true
+config_drive_vfat=true
+bsdtar_path={{ cloudbase_bsdtar_path }}
+mtools_path={{ cloudbase_mtools_path }}
+verbose=true
+debug=true
+logdir={{ cloudbase_log_dir }}
+logfile=cloudbase-init-unattend.log
+default_log_levels=comtypes=INFO,suds=INFO,iso8601=WARN,requests=WARN
+mtu_use_dhcp_config=true
+ntp_use_dhcp_config=true
+local_scripts_path={{ cloudbase_local_scripts_path }}
+check_latest_version=false
+metadata_services= {{ cloudbase_metadata_services }}
+plugins=cloudbaseinit.plugins.common.mtu.MTUPlugin
+allow_reboot=false
+stop_service_on_exit=false

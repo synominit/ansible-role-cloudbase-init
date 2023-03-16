@@ -1,0 +1,26 @@
+---
+cloudbase_plugins:
+  - cloudbaseinit.plugins.windows.createuser.CreateUserPlugin
+  - cloudbaseinit.plugins.common.networkconfig.NetworkConfigPlugin
+  - cloudbaseinit.plugins.windows.licensing.WindowsLicensingPlugin
+  - cloudbaseinit.plugins.common.ephemeraldisk.EphemeralDiskPlugin
+  - cloudbaseinit.plugins.common.mtu.MTUPlugin
+  - cloudbaseinit.plugins.common.sethostname.SetHostNamePlugin
+  - cloudbaseinit.plugins.common.sshpublickeys.SetUserSSHPublicKeysPlugin
+  - cloudbaseinit.plugins.common.userdata.UserDataPlugin
+  - cloudbaseinit.plugins.common.localscripts.LocalScriptsPlugin
+
+cloudbase_metadata_services: cloudbaseinit.metadata.services.vmwareguestinfoservice.VMwareGuestInfoService
+
+cloudbase_install_path: "C:\Program Files\Cloudbase Solutions\Cloudbase-Init"
+
+
+cloudbase_bsdtar_path: '{{ cloudbase_install_path }}\bin\bsdtar.exe'
+cloudbase_mtools_path: '{{ cloudbase_install_path }}\bin\'
+cloudbase_log_dir: '{{ cloudbase_install_path }}\log\'
+cloudbase_local_scripts_path: '{{ cloudbase_install_path }}\LocalScripts\'
+
+cloudbase_activate_windows: yes
+cloudbase_set_kms_product_key: ""
+cloudbase_kms_host: ""
+cloudbase_log_licensing_info: no

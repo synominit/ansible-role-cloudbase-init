@@ -1,0 +1,27 @@
+[DEFAULT]
+username=Admin
+groups=Administrators
+inject_user_password=true
+config_drive_raw_hhd=true
+config_drive_cdrom=true
+config_drive_vfat=true
+bsdtar_path={{ cloudbase_bsdtar_path }}
+mtools_path={{ cloudbase_mtools_path }}
+verbose=true
+debug=true
+logdir={{ cloudbase_log_dir }}
+logfile=cloudbase-init.log
+default_log_levels=comtypes=INFO,suds=INFO,iso8601=WARN,requests=WARN
+logging_serial_port_settings=None
+mtu_use_dhcp_config=true
+ntp_use_dhcp_config=true
+local_scripts_path={{ cloudbase_local_scripts_path }}
+check_latest_version=true
+metadata_services= {{ cloudbase_metadata_services }}
+plugins={{ cloudbase_plugins | join(',') }}
+activate_windows = {{ cloudbase_activate_windows }}
+{% if cloudbase_activate_windows %}
+set_kms_product_key = {{ cloudbase_set_kms_product_key }}
+kms_host = {{ cloudbase_kms_host }}
+log_licensing_info = {{ cloudbase_log_licensing_info }}
+{% endif %}
